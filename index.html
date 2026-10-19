@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>Care 💗 | A Birthday Surprise for Maliha</title>
+<style>
+:root{--pink:#ff5c9a;--deep:#b42f70;--cream:#fff7fb;--ink:#422b43;--gold:#ffd36e;--lav:#d9c5ff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,#fff 0,#fff0f7 42%,#f0e7ff 100%);overflow-x:hidden}
+button,input{font:inherit}
+button{border:0;cursor:pointer}
+.wrap{width:min(760px,92%);margin:0 auto;padding:26px 0 50px;text-align:center}
+.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:.75rem;color:var(--deep);font-weight:800}
+h1{font-size:clamp(2rem,8vw,4rem);line-height:1.06;margin:.4em 0;color:#a82761}
+.sub{line-height:1.7;color:#795469}
+.panel{background:#ffffffd9;border:1px solid #ffffff;box-shadow:0 16px 50px #bd46751c;border-radius:28px;padding:clamp(20px,5vw,36px);margin:20px auto;backdrop-filter:blur(10px)}
+input{width:min(100%,340px);padding:14px 16px;border:1px solid #efb4cf;border-radius:14px;outline:none;background:#fff;color:var(--ink);text-align:center}
+input:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff5f9e22}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:999px;background:linear-gradient(135deg,#ff6da8,#e63f85);color:white;font-weight:800;box-shadow:0 8px 20px #e63f8533;margin:8px 4px}
+.btn.secondary{background:#fff;color:var(--deep);border:1px solid #f1b8d1;box-shadow:none}
+.error{min-height:1.4em;color:#c1285f;font-size:.9rem}
+.gift-stage{min-height:280px;display:grid;place-items:center;position:relative}
+.gift{position:relative;width:170px;height:150px;animation:bob 2.5s ease-in-out infinite;filter:drop-shadow(0 15px 12px #b82d6830)}
+.gift-box{position:absolute;bottom:0;left:10px;width:150px;height:100px;border-radius:8px;background:linear-gradient(90deg,#f64f93,#ff86b6);border:3px solid #fff0f7}
+.gift-box:before{content:"";position:absolute;left:58px;top:0;width:28px;height:100%;background:var(--gold)}
+.gift-lid{position:absolute;z-index:2;left:0;top:34px;width:170px;height:30px;border-radius:8px;background:#ff9fc5;border:3px solid #fff0f7;transform-origin:15% 100%;transition:transform .9s ease}
+.gift-bow{position:absolute;z-index:3;top:0;left:57px;width:56px;height:38px}
+.gift-bow:before,.gift-bow:after{content:"";position:absolute;width:28px;height:25px;border:8px solid var(--gold);border-radius:70% 70% 15% 70%;transform:rotate(25deg)}
+.gift-bow:after{left:23px;transform:scaleX(-1) rotate(25deg)}
+.gift.open .gift-lid{transform:translate(-22px,-65px) rotate(-28deg)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hidden{display:none!important}
+.photo{width:min(100%,330px);max-height:360px;object-fit:cover;border-radius:22px;border:6px solid white;box-shadow:0 10px 30px #a8276120}
+.letter{background:linear-gradient(145deg,#fff7fb,#f9f3ff);border:1px solid #f0d7f0;border-radius:22px;padding:24px;text-align:left;line-height:1.85;white-space:pre-wrap;box-shadow:0 8px 24px #b42f7010}.chat-head{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;background:#fff;border-radius:18px;margin:0 auto 18px;max-width:440px;box-shadow:0 5px 20px #b42f7010}.avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ff9fc5,#d9c5ff);font-size:1.5rem}.chat-bubble{max-width:90%;margin:12px auto;padding:14px 17px;border-radius:20px 20px 20px 6px;background:#f1e8ff;text-align:left;line-height:1.6}.chat-bubble.right{margin-left:auto;margin-right:0;background:linear-gradient(135deg,#ffb5d0,#ffcde0);border-radius:20px 20px 6px 20px}.music-note{font-size:.82rem;color:#8b647b;margin-top:10px}
+.cake{font-size:5.5rem;animation:bob 2s ease-in-out infinite}
+footer{font-size:.8rem;color:#9a7188;margin-top:30px}
+.sparkle{position:fixed;pointer-events:none;z-index:10;animation:fall 2.5s linear forwards;font-size:1.3rem}
+@keyframes fall{to{transform:translateY(110vh) rotate(520deg);opacity:0}}
+details{text-align:left;background:#fff;border-radius:14px;padding:12px 16px;margin-top:18px}
+small{color:#8b647b}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="chat-head"><div class="avatar">💗</div><div><strong id="profileName">Takia Maliha Tajun</strong><div style="font-size:.8rem;color:#9a7188">active in your heart ✨</div></div><div style="margin-left:auto;color:#b42f70;font-size:1.3rem">♡</div></div>
+  <div class="kicker">a little care-themed surprise</div>
+  <h1 id="mainTitle">For my favourite girl 💗</h1>
+  <p class="sub" id="intro">A little gift, a little magic, and lots of love. Enter the secret password to begin.</p>
+  <div class="chat-bubble">psst… someone made a little surprise just for you 🥹💌</div>
+
+  <section class="panel" id="lockPanel">
+    <div style="font-size:2.4rem">🔐</div>
+    <h2>Only you can open this</h2>
+    <p class="sub">Enter your secret password below.</p>
+    <form id="unlockForm">
+      <input id="passwordInput" type="password" placeholder="Secret password" autocomplete="off" required aria-label="Secret password">
+      <div><button class="btn" type="submit">Unlock my surprise ✨</button></div>
+    </form>
+    <div class="error" id="errorMsg" aria-live="polite"></div>
+  </section>
+
+  <section class="panel hidden" id="giftPanel">
+    <p class="kicker">Surprise unlocked!</p>
+    <div class="gift-stage">
+      <div class="gift" id="gift">
+        <div class="gift-lid"></div><div class="gift-bow"></div><div class="gift-box"></div>
+      </div>
+    </div>
+    <div class="chat-bubble right">you deserve all the sweetest things in the world 💗</div>
+    <h2 id="giftHeading">A gift for you 🎁</h2>
+    <p class="sub">Ready? Tap the button and open your little surprise.</p>
+    <button class="btn" id="openGift">Open the gift 💝</button>
+  </section>
+
+  <section class="panel hidden" id="surprisePanel">
+    <div class="cake">🎂</div>
+    <p class="kicker">Make a wish</p>
+    <h2 id="birthdayHeading">Happy Birthday, Sunshine! 🎉</h2>
+    <p class="sub" id="birthdayText">May your day be as lovely and bright as your smile.</p>
+    <button class="btn" id="wishBtn">Celebrate! 🎊</button>
+    <div style="margin-top:22px">
+      <img id="memoryPhoto" class="photo hidden" alt="A special memory">
+    </div>
+    <p class="sub" id="photoCaption"></p>
+    <h2>💌 A letter for you</h2>
+    <div class="chat-bubble">this message is only for you… 💗</div>
+    <div class="letter" id="letterText"></div>
+    <div style="margin-top:18px">
+      <button class="btn secondary" id="musicBtn">🎵 Play birthday music</button>
+      <button class="btn secondary" id="againBtn">Replay surprise ↻</button>
+    </div>
+    <p class="music-note">🎧 Song: “Those Eyes” — New West. Add a legally obtained audio file named <code>music.mp3</code> beside this page to play it here. Or tap below to find the song online.</p>
+    <a class="btn secondary" href="https://www.youtube.com/results?search_query=Those+Eyes+New+West+official" target="_blank" rel="noopener">Find “Those Eyes” on YouTube ↗</a>
+  </section>
+
+  <details>
+    <summary><strong>✏️ Personalize this gift (for the creator)</strong></summary>
+    <p><small>Edit the CONFIG section near the bottom of this file to change the password, names, letter, photo, and music. This settings area is only a guide; edit the file in a text editor.</small></p>
+  </details>
+  <footer>Made with a little HTML, a little magic, and a lot of heart 💗</footer>
+</main>
+
+<!-- Optional music: add an audio file named music.mp3 beside this index.html file. -->
+<audio id="bgMusic" loop preload="none" src="music.mp3"></audio>
+
+<script>
+/* ================= PERSONALIZE YOUR SURPRISE HERE =================
+   1) Change PASSWORD to your chosen password.
+   2) Change the names and message.
+   3) For a photo, place an image in this folder and set PHOTO to its filename,
+      for example "our-photo.jpg". Leave it "" to hide the photo.
+   4) Add your own licensed/royalty-free music file named music.mp3 to this folder.
+   This is a cute surprise lock, not strong security: the password is visible in source code.
+==================================================================== */
+const CONFIG = {
+  PASSWORD: "030612",
+  RECIPIENT: "Takia Maliha Tajun",
+  SENDER: "Someone who loves you",
+  INTRO: "A little gift, a little magic, and lots of love. Enter the secret password to begin.",
+  BIRTHDAY_MESSAGE: "You are one of the most beautiful parts of my life. I hope life gives you the happiness, peace, and love you deserve. Keep shining, my star. 💗",
+  LETTER: `TO THE BEST GURL IN THE WORLD, HAPPIEST HAPPY BIRTHDAY<3
+
+Among billions of people I only felt for you.Your smile melt my heart n your memories completed my day. I never feel any butterplies on my stomach before I knew you. I'm so proud of you. Thanks to be born.You deserve eternal happiness.Please, keep shining our stars.Because of you hundreds of souls have found the meaning of happiness.I love you n I really do.You are the most beautiful thing that has ever happened in my life.You are the only person in my life that I'll miss for the rest of my life.I am sorry for not understanding you.Whatever all I want is your happiness.I want you to achieve everything you want.Please don't distract yourself.I really do miss you.it's been a long time,right? My love for you will never fade.You are my love,my lady,my baby girl,my wifey and everything.If you need any help,I'm always a call away no matter where you are or what the situation is.I'll always be by your side and I'll be waiting for the day to be with you.You're still a lot for mee.I miss you moree.Have a good day.
+
+AGAIN HAPPY BIRTHDAY TO THE LOML(LOST OF MY LIFE) AND THANKS TO BE BORN♡`,
+  PHOTO: "",
+  PHOTO_CAPTION: "A little memory to keep close ✨"
+};
+/* ================= END OF PERSONAL SETTINGS ================= */
+
+const $ = id => document.getElementById(id);
+$("profileName").textContent = CONFIG.RECIPIENT;
+const lockPanel=$("lockPanel"),giftPanel=$("giftPanel"),surprisePanel=$("surprisePanel");
+$("mainTitle").textContent = `A surprise for ${CONFIG.RECIPIENT} 💗`;
+$("intro").textContent = CONFIG.INTRO;
+$("giftHeading").textContent = `A little gift for ${CONFIG.RECIPIENT} 🎁`;
+$("birthdayHeading").textContent = `Happy Birthday, ${CONFIG.RECIPIENT}! 🎉`;
+$("birthdayText").textContent = CONFIG.BIRTHDAY_MESSAGE;
+$("letterText").textContent = `${CONFIG.LETTER}\n\n— ${CONFIG.SENDER}`;
+$("photoCaption").textContent = CONFIG.PHOTO_CAPTION;
+if(CONFIG.PHOTO.trim()){
+  $("memoryPhoto").src=CONFIG.PHOTO;
+  $("memoryPhoto").classList.remove("hidden");
+}
+$("unlockForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  if($("passwordInput").value === CONFIG.PASSWORD){
+    lockPanel.classList.add("hidden");giftPanel.classList.remove("hidden");$("errorMsg").textContent="";
+    confetti(18);
+  }else{
+    $("errorMsg").textContent="That password didn't work. Try again 💗";
+    $("passwordInput").value="";$("passwordInput").focus();
+  }
+});
+$("openGift").addEventListener("click",()=>{
+  $("gift").classList.add("open");
+  $("openGift").disabled=true;
+  $("openGift").textContent="Opening your gift…";
+  setTimeout(()=>{giftPanel.classList.add("hidden");surprisePanel.classList.remove("hidden");confetti(65);},850);
+});
+$("wishBtn").addEventListener("click",()=>confetti(70));
+function confetti(count){
+  const symbols=["💗","✨","🎉","🌸","💖","⭐"];
+  for(let i=0;i<count;i++){
+    const el=document.createElement("span");el.className="sparkle";
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+"vw";el.style.top="-35px";
+    el.style.animationDelay=(Math.random()*.8)+"s";
+    document.body.appendChild(el);setTimeout(()=>el.remove(),3500);
+  }
+}
+let playing=false;
+$("musicBtn").addEventListener("click",async()=>{
+  const audio=$("bgMusic");
+  try{
+    if(!playing){await audio.play();playing=true;$("musicBtn").textContent="⏸ Pause birthday music";}
+    else{audio.pause();playing=false;$("musicBtn").textContent="🎵 Play birthday music";}
+  }catch(e){alert("Add a music.mp3 file next to index.html, then try again.");}
+});
+$("againBtn").addEventListener("click",()=>{
+  surprisePanel.classList.add("hidden");giftPanel.classList.add("hidden");lockPanel.classList.remove("hidden");
+  $("passwordInput").value="";$("gift").classList.remove("open");$("openGift").disabled=false;$("openGift").textContent="Open the gift 💝";
+  $("bgMusic").pause();$("bgMusic").currentTime=0;playing=false;$("musicBtn").textContent="🎵 Play birthday music";
+});
+</script>
+</body>
+</html>
