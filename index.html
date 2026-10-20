@@ -90,6 +90,24 @@ small{color:#96758a}
     </div>
     <p class="muted">A little song for you. Let it play while you read. 💗</p>
     <p><small>Music file: music.mp3 (must be uploaded beside index.html)</small></p>
+    <div id="friend-surprise" style="margin:25px auto;padding:22px;background:linear-gradient(135deg,#ffe0ef,#fff0f7);border:2px solid #ffadd2;border-radius:24px;text-align:center;color:#a52d68;box-shadow:0 8px 25px #ff69a440">
+  <div style="font-size:32px">🎀💗🎀</div>
+  <button class="btn" id="friend-open" onclick="document.getElementById('friend-question').style.display='block';this.style.display='none'">Open your little surprise 💌</button>
+  <div id="friend-question" style="display:none;animation:friendPop .5s ease">
+    <h2>Can we be friend? 🥺💕</h2>
+    <button class="btn" onclick="document.getElementById('friend-result').innerHTML='💗💖💕<br>I love you too 🥹💗🌷'">Yes 💗</button>
+    <button class="btn alt" onclick="document.getElementById('friend-result').innerHTML='Wrong answer! 😾💢🥺'">No 🙈</button>
+    <div id="friend-result" style="margin-top:18px;font-size:22px;font-weight:bold"></div>
+  </div>
+</div>
+
+<style>
+@keyframes friendPop {
+  from {opacity:0;transform:scale(.8)}
+  to {opacity:1;transform:scale(1)}
+}
+#friend-surprise button {margin:6px}
+</style>
   </section>
   <footer>made with love, just for you 💗</footer>
 </main>
@@ -220,58 +238,5 @@ $("pauseBtn").addEventListener("click",()=>$("music").pause());
     animation: none;
   }
 }
-</style>
-
-<div id="friend-surprise">
-  <div style="font-size:35px">🎀 💗 🎀</div>
-  <h3>A Little Question For You</h3>
-
-  <button id="friend-open" onclick="openFriendQuestion()">
-    Open Your Surprise 💌
-  </button>
-
-  <div id="friend-question">
-    <h3>Can we be friend? 🥺💕</h3>
-
-    <div class="friend-options">
-      <button class="friend-btn" onclick="answerFriend(true)">
-        Yes 💗
-      </button>
-      <button class="friend-btn" id="friend-no"
-        onclick="answerFriend(false)">
-        No 🙈
-      </button>
-    </div>
-  </div>
-
-  <div id="friend-result" aria-live="polite"></div>
-</div>
-
-<script>
-function openFriendQuestion() {
-  document.getElementById('friend-question').style.display = 'block';
-  document.getElementById('friend-open').style.display = 'none';
-}
-
-function answerFriend(yes) {
-  const result = document.getElementById('friend-result');
-
-  result.classList.remove('pop');
-  void result.offsetWidth;
-  result.classList.add('pop');
-
-  if (yes) {
-    result.innerHTML =
-      '<div class="heart-sparkle">💗 💖 💕</div>' +
-      '<div>I love you too 🥹💗</div>' +
-      '<div style="font-size:30px">🌷💞🧸</div>';
-  } else {
-    result.innerHTML =
-      '<div>Wrong answer! 😾</div>' +
-      '<div style="font-size:38px">😤💢🥺</div>' +
-      '<div style="font-size:14px">Hehe, try again! 🎀</div>';
-  }
-}
-</script>
 </body>
 </html>
