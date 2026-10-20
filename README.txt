@@ -1,21 +1,19 @@
-SECRET BIRTHDAY SURPRISE — TAKIA MALIHA TAJUN
+TAKIA MALIHA TAJUN — BIRTHDAY SURPRISE (LIP PRINT LETTER BACKGROUND)
 
-Personalized with a Care-inspired pink/lilac chat aesthetic.
-Default password: 030612
-Song requested: Those Eyes — New West
+Files:
+- index.html: updated website with two gift boxes, flower animation, letter and music control
+- lips-background.jpg: your uploaded red lipstick-print image, used behind the letter
+- README.txt: this guide
 
-PERSONALIZE
-- Edit index.html and find the CONFIG section near the bottom.
-- Change the password, name, message, letter, or photo filename as needed.
-- To show a photo, place an image in the same folder and set PHOTO to e.g. "our-photo.jpg".
-- To play music inside the page, add a legally obtained audio file named music.mp3 beside index.html. The page also has a YouTube search link for “Those Eyes — New West”. Browsers generally block autoplay, so the recipient must tap Play.
+Keep index.html, lips-background.jpg, and music.mp3 in the same GitHub repository root.
+The ZIP includes the background image. The music file is not included; upload your own authorized MP3 as music.mp3.
 
-FREE PUBLISHING WITH GITHUB PAGES
-1. Sign in/create a free account at https://github.com/
-2. Create a public repository, e.g. birthday-surprise.
-3. Extract this ZIP and upload index.html plus any photo/music files to the repository root.
-4. Open Settings → Pages.
-5. Under Build and deployment, choose Deploy from a branch; branch main; folder /(root); Save.
-6. Wait for GitHub Pages to publish and use the link shown in the Pages section.
+Password: 030612
 
-IMPORTANT: This is a playful surprise lock, not secure authentication. The password is visible in the source code. Do not put private/sensitive information on the page.
+To publish/update:
+1. Extract this ZIP.
+2. Upload/replace index.html and upload lips-background.jpg to the same GitHub repository root.
+3. Keep your existing music.mp3 in that same root.
+4. Wait for GitHub Pages to redeploy and refresh the website.
+
+Note: The password is visible in the page source, so this is a fun surprise lock, not secure protection.
