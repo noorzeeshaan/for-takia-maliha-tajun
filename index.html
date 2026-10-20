@@ -35,7 +35,7 @@ input{width:min(100%,340px);padding:14px;border:1px solid #efb6d1;border-radius:
 .bow:after{left:23px;transform:scaleX(-1) rotate(25deg)}
 .gift.open .lid{transform:translate(-28px,-70px) rotate(-28deg)}
 .gift.open{animation:none}
-.letter{white-space:pre-wrap;text-align:left;background:linear-gradient(rgba(255,250,239,.20),rgba(255,250,239,.30)),url('lips-background.jpg') center/cover no-repeat;border:1px solid #ffe5b3;border-radius:20px;padding:22px;line-height:1.9;font-size:1rem;box-shadow:0 8px 24px #b7447820}
+.letter{white-space:pre-wrap;text-align:left;background:linear-gradient(rgba(255,250,239,.15),rgba(255,250,239,.25)),url('lips-background.jpg') center/cover no-repeat;border:1px solid #ffe5b3;border-radius:20px;padding:22px;line-height:1.9;font-size:1rem;box-shadow:0 8px 24px #b7447820}
 .photo{max-width:100%;max-height:360px;object-fit:cover;border:6px solid white;border-radius:22px;margin:10px auto}
 .flower{position:fixed;z-index:20;top:-60px;pointer-events:none;font-size:clamp(22px,6vw,42px);animation:fall 3.7s linear forwards}
 @keyframes fall{to{transform:translateY(115vh) rotate(540deg);opacity:.1}}
@@ -96,9 +96,7 @@ small{color:#96758a}
 <audio id="music" loop preload="none" src="music.mp3"></audio>
 <script>
 const PASSWORD = "030612";
-const LETTER = `TO THE BEST GURL IN THE WORLD <3
-
-Among billions of people, I only ever felt this way for you. Your smile melts my heart, and your memories complete my day. I never felt any butterflies in my stomach before I knew you. I'm so proud of you. You deserve eternal happiness. Please keep shining, our star. Because of you, hundreds of souls have found the meaning of happiness. I love you, and I really do. You are the most beautiful thing that has ever happened in my life. You are the only person in my life that I'll miss for the rest of my life. I'm sorry for not understanding you. Whatever happens, all I want is your happiness. I want you to achieve everything you want, so please don't distract yourself. I really do miss you. It's been a long time, right? My love for you will never fade. You are my love, my lady, my baby girl, my wifey, and everything. If you ever need any help, I'm always just a call away, no matter where you are or what the situation is. I'll always be by your side, and I'll be waiting for the day I get to be with you. You're still a lot to me. I miss you moreee, loml. ❤️`;
+const LETTER = `Among billions of people, I only ever felt this way for you. Your smile melts my heart, and your memories complete my day. I never felt any butterflies in my stomach before I knew you. I'm so proud of you. You deserve eternal happiness. Please keep shining, our star. Because of you, hundreds of souls have found the meaning of happiness. I love you, and I really do. You are the most beautiful thing that has ever happened in my life. You are the only person in my life that I'll miss for the rest of my life. I'm sorry for not understanding you. Whatever happens, all I want is your happiness. I want you to achieve everything you want, so please don't distract yourself. I really do miss you. It's been a long time, right? My love for you will never fade. You are my love, my lady, my baby girl, my wifey, and everything. If you ever need any help, I'm always just a call away, no matter where you are or what the situation is. I'll always be by your side, and I'll be waiting for the day I get to be with you. You're still a lot to me. I miss you moreee, loml. ❤️`;
   document.getElementById("letter").textContent=LETTER;
 const $=id=>document.getElementById(id);
 $("unlockForm").addEventListener("submit",e=>{
