@@ -35,7 +35,7 @@ input{width:min(100%,340px);padding:14px;border:1px solid #efb6d1;border-radius:
 .bow:after{left:23px;transform:scaleX(-1) rotate(25deg)}
 .gift.open .lid{transform:translate(-28px,-70px) rotate(-28deg)}
 .gift.open{animation:none}
-.letter{white-space:pre-wrap;text-align:left;background:linear-gradient(rgba(255,250,239,.25),rgba(255,250,239,.35)),url('lips-background.jpg') center/cover no-repeat;border:1px solid #ffe5b3;border-radius:20px;padding:22px;line-height:1.9;font-size:1rem;box-shadow:0 8px 24px #b7447820}
+.letter{white-space:pre-wrap;text-align:left;background:linear-gradient(rgba(255,250,239,.30),rgba(255,250,239,.40)),url('lips-background.jpg') center/cover no-repeat;border:1px solid #ffe5b3;border-radius:20px;padding:22px;line-height:1.9;font-size:1rem;box-shadow:0 8px 24px #b7447820}
 .photo{max-width:100%;max-height:360px;object-fit:cover;border:6px solid white;border-radius:22px;margin:10px auto}
 .flower{position:fixed;z-index:20;top:-60px;pointer-events:none;font-size:clamp(22px,6vw,42px);animation:fall 3.7s linear forwards}
 @keyframes fall{to{transform:translateY(115vh) rotate(540deg);opacity:.1}}
@@ -129,6 +129,149 @@ $("musicBtn").addEventListener("click",async()=>{
  catch(e){alert("Please upload the song file named music.mp3 beside index.html. Browsers require a tap before music can play.");}
 });
 $("pauseBtn").addEventListener("click",()=>$("music").pause());
+</script>
+<style>
+#friend-surprise {
+  margin: 28px auto;
+  padding: 22px;
+  max-width: 420px;
+  text-align: center;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ffe0ef, #fff0f7, #ffd0e7);
+  border: 2px solid #ffacd2;
+  box-shadow: 0 8px 25px #ff69a440;
+  font-family: sans-serif;
+  color: #9d285e;
+  animation: pinkFloat 3s ease-in-out infinite;
+}
+
+#friend-surprise h3 {
+  margin: 8px 0 16px;
+  font-size: 23px;
+}
+
+#friend-open, .friend-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 23px;
+  background: #ff78b5;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #e7549660;
+  transition: transform .2s;
+}
+
+.friend-btn:active, #friend-open:active {
+  transform: scale(.92);
+}
+
+#friend-question {
+  display: none;
+  margin-top: 18px;
+  animation: popPink .5s ease;
+}
+
+.friend-options {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+#friend-no {
+  background: #ffb0ce;
+  color: #8b2452;
+}
+
+#friend-result {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+#friend-result.pop {
+  animation: popPink .45s ease;
+}
+
+.heart-sparkle {
+  animation: heartBeat .8s ease-in-out infinite alternate;
+}
+
+@keyframes pinkFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes popPink {
+  from { opacity: 0; transform: scale(.75); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heartBeat {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #friend-surprise, .heart-sparkle {
+    animation: none;
+  }
+}
+</style>
+
+<div id="friend-surprise">
+  <div style="font-size:35px">🎀 💗 🎀</div>
+  <h3>A Little Question For You</h3>
+
+  <button id="friend-open" onclick="openFriendQuestion()">
+    Open Your Surprise 💌
+  </button>
+
+  <div id="friend-question">
+    <h3>Can we be friend? 🥺💕</h3>
+
+    <div class="friend-options">
+      <button class="friend-btn" onclick="answerFriend(true)">
+        Yes 💗
+      </button>
+      <button class="friend-btn" id="friend-no"
+        onclick="answerFriend(false)">
+        No 🙈
+      </button>
+    </div>
+  </div>
+
+  <div id="friend-result" aria-live="polite"></div>
+</div>
+
+<script>
+function openFriendQuestion() {
+  document.getElementById('friend-question').style.display = 'block';
+  document.getElementById('friend-open').style.display = 'none';
+}
+
+function answerFriend(yes) {
+  const result = document.getElementById('friend-result');
+
+  result.classList.remove('pop');
+  void result.offsetWidth;
+  result.classList.add('pop');
+
+  if (yes) {
+    result.innerHTML =
+      '<div class="heart-sparkle">💗 💖 💕</div>' +
+      '<div>I love you too 🥹💗</div>' +
+      '<div style="font-size:30px">🌷💞🧸</div>';
+  } else {
+    result.innerHTML =
+      '<div>Wrong answer! 😾</div>' +
+      '<div style="font-size:38px">😤💢🥺</div>' +
+      '<div style="font-size:14px">Hehe, try again! 🎀</div>';
+  }
+}
 </script>
 </body>
 </html>
